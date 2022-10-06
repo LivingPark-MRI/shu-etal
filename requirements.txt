@@ -8,3 +8,7 @@ boutiques
 livingpark_utils
 nilearn
 wget
+pyradiomics
+ipython
+nibabel
+tqdm
