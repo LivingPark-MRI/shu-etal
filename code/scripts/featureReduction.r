@@ -29,10 +29,13 @@ if (cohortType == "reference"){
     df <- read.csv("outputs/radiomics/Reference Cohort/features.csv", header = TRUE)
 }
 if (cohortType == "multiple"){
-    df <- read.csv("outputs/radiomics/Multiple 3T Scanner Cohort/features.csv", header = TRUE)
+    df <- read.csv("outputs/radiomics/Multiple Scanner Cohort/features.csv", header = TRUE)
 } 
 if (cohortType == "pdstate"){
     df <- read.csv("outputs/radiomics/PD-state Cohort/features.csv", header = TRUE)
+}
+if (cohortType == "nofilter"){
+    df <- read.csv("outputs/radiomics/No Filter Cohort/features.csv", header = TRUE)
 }
 
 # Set output index as numeric value
@@ -52,10 +55,14 @@ if (cohortType == "reference"){
     cat(green("Succesfully computed top features, index available in: outputs/radiomics/Reference Cohort/featureIndex.csv"))
 }
 if (cohortType == "multiple"){
-    write.csv(solutions(solution), "outputs/radiomics/Multiple 3T Scanner Cohort/featureIndex.csv")
+    write.csv(solutions(solution), "outputs/radiomics/Multiple Scanner Cohort/featureIndex.csv")
     cat(green("Succesfully computed top features, index available in: outputs/radiomics/Multiple 3T Scanner Cohort/featureIndex.csv"))
 }
 if (cohortType == "pdstate"){
     write.csv(solutions(solution), "outputs/radiomics/PD-state Cohort/featureIndex.csv")
     cat(green("Succesfully computed top features, index available in: outputs/radiomics/PD-state-cohort/featureIndex.csv"))
+}
+if (cohortType == "nofilter"){
+    write.csv(solutions(solution), "outputs/radiomics/No Filter Cohort/featureIndex.csv")
+    cat(green("Succesfully computed top features, index available in: outputs/radiomics/No Filter Cohort/featureIndex.csv"))
 }
