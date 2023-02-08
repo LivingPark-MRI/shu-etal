@@ -12,3 +12,4 @@ pyradiomics
 ipython
 nibabel
 tqdm
+scipy
