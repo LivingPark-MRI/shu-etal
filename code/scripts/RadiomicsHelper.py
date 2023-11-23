@@ -9,6 +9,18 @@ Required to save 'angles' as a variable in the GLCM & GLRLM classes
 '''
 
 class RadiomicsHelper:
+    '''
+    Parameters
+    ----------
+    image : sitk.Image
+        MRI image of patient
+    mask : sitk.Image
+        White matter mask of patient
+    distance : int
+        Offset to calculate matrix, single number, must be a list
+    binCount: int
+        Binning level to use for pre-processing
+    '''
     def __init__(self, image, mask, distance=[1], binCount=32):
         if not isinstance(image, sitk.Image):
             raise ValueError("Image must be a SimpleITK (sitk) Image.")
@@ -16,6 +28,8 @@ class RadiomicsHelper:
             raise ValueError("Mask must be a SimpleITK (sitk) Image.")
         if not isinstance(distance, list):
             raise ValueError("Distance must be a list.")
+        if len(distance) != 1:
+            raise ValueError("Only a single distance can be defined.")
         if not isinstance(binCount, int):
             raise ValueError("BinCount must be an integer.")
 
