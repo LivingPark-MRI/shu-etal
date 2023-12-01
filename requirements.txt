@@ -13,3 +13,5 @@ ipython
 nibabel
 tqdm
 scipy
+pybids
+SimpleITK
