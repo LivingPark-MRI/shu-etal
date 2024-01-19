@@ -1,0 +1,22 @@
+{
+    "features_to_extract": [
+        "original_glszm_SizeZoneNonUniformity",
+        "original_glszm_LargeAreaEmphasis",
+        "original_glszm_SmallAreaEmphasis",
+        "original_glszm_ZonePercentage",
+        "original_glcm_ClusterProminence",
+        "original_glcm_ClusterShade",
+        "original_glcm_Correlation",
+        "original_glcm_JointEntropy",
+        "original_glcm_Contrast",
+        "original_glcm_DifferenceAverage",
+        "original_gldm_GrayLevelNonUniformity",
+        "original_gldm_HighGrayLevelEmphasis",
+        "original_glrlm_LongRunEmphasis",
+        "original_glrlm_LongRunLowGrayLevelEmphasis",
+        "original_glrlm_LongRunHighGrayLevelEmphasis",
+        "original_glrlm_RunLengthNonUniformity",
+        "original_glrlm_ShortRunEmphasis",
+        "original_glrlm_ShortRunHighGrayLevelEmphasis"
+    ]
+}
